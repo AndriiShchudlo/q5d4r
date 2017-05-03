@@ -4,8 +4,14 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
-class Menu(models.Model):
-    sectionName = models.CharField(max_length=150)
+
+
+class NewMenu(models.Model):
+    section = models.TextField()
+    sectionImage = models.TextField()
 
     def __str__(self):
-        return self.sectionName
+        return self.section
+class Item(models.Model):
+     name = models.TextField()
+     sectionid = models.TextField()

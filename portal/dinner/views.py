@@ -1,9 +1,18 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+
+
+from dinner.models import NewMenu
+
+from dinner.models import Item
+
 
 def home(request):
-    return render(request, 'dinner/home.html')
+    menuSection = NewMenu.objects.all()
+    item = Item.objects.all()
+    return render(request, 'dinner/home.html', {
+        "menus": menuSection,
+        "items": item
+    })

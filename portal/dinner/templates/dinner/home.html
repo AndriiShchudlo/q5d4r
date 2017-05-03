@@ -2,6 +2,16 @@
 
 {% block title %} Home {%endblock%}
 {% block content %}
-<h1>sadas</h1>
+
+
+{%for menu in menus %}
+ <div>
+    <h3>{{menu.section}}<h3>
+    {%for i in items%}
+        {{i.name}}
+
+        {%endfor%}
+ </div>
+{% endfor %}
 
 {%endblock%}

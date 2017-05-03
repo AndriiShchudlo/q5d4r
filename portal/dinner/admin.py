@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import Menu
-# Register your models here.
-admin.site.register(Menu)
+from .models import NewMenu, Item
+
+admin.site.register(NewMenu)
+admin.site.register(Item)
