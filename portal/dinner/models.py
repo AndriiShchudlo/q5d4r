@@ -24,3 +24,19 @@ class Food(models.Model):
 
     def __str__(self):
         return self.foodName
+
+
+class Bascket(models.Model):
+    class Meta:
+        db_table = "bascket"
+    productName = models.TextField()
+    productCategory = models.TextField()
+    productPrice = models.FloatField()
+    def __str__(self):
+        return self.productName
+
+class Purchase(models.Model):
+    class Meta:
+        db_table = "purchase"
+    username = models.TextField()
+    purchaseId = models.ForeignKey(Bascket)

@@ -24,3 +24,5 @@ def home(request):
 def login(request):
     return render(request, 'dinner/login.html', {})
 
+def basket(request):
+    return render(request, 'dinner/basket.html', {})
