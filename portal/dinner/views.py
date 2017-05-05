@@ -3,17 +3,24 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.contrib import auth
 
+from dinner.models import Food, Menu
 
-from dinner.models import FirstFood, SecondFood
 
+
+def get_user(request):
+    username = None
+    if request.user.is_authenticated():
+        username = request.user.username
+    return render(request, 'dinner/base.html', {"user": username})
 
 def home(request):
-    firstFoods = FirstFood.objects.all()
-    secondFoods = SecondFood.objects.all()
+    food = Food.objects.all()
+    menu = Menu.objects.all()
     return render(request, 'dinner/home.html', {
-        "firstFoods": firstFoods,
-        "secondFoods": secondFoods,
+        "foods": food,
+        "menu": menu,
     })
 
 def login(request):
     return render(request, 'dinner/login.html', {})
+

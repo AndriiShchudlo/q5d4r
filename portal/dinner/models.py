@@ -5,21 +5,22 @@ from django.db import models
 
 # # Create your models here.
 # #
-class FirstFood(models.Model):
-    class Meta:
-        db_table = "first_food"
-    firstFoodName = models.TextField()
-    firstFoodPrice = models.FloatField()
-    firstFoodImage = models.TextField(default=None)
-    def __str__(self):
-        return self.firstFoodName
 
-#
-class SecondFood(models.Model):
+
+class Menu(models.Model):
     class Meta:
-        db_table = "second_food"
-    secondFoodName = models.TextField()
-    secondFoodPrice = models.FloatField()
-    secondFoodImage = models.TextField(default=None)
+        db_table = "menu"
+    categoryName = models.TextField()
+    categoryPrice = models.FloatField()
     def __str__(self):
-        return self.secondFoodName
+        return self.categoryName
+
+class Food(models.Model):
+    class Meta:
+        db_table = "food"
+    foodName = models.TextField()
+    foodImage = models.TextField(default=None)
+    foodCategory = models.ForeignKey(Menu)
+
+    def __str__(self):
+        return self.foodName
