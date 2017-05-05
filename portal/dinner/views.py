@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render
+from django.contrib import auth
 
 
-
-from dinner.models import NewMenu
-
-from dinner.models import Item
+from dinner.models import FirstFood, SecondFood
 
 
 def home(request):
-    menuSection = NewMenu.objects.all()
-    item = Item.objects.all()
+    firstFoods = FirstFood.objects.all()
+    secondFoods = SecondFood.objects.all()
     return render(request, 'dinner/home.html', {
-        "menus": menuSection,
-        "items": item
+        "firstFoods": firstFoods,
+        "secondFoods": secondFoods,
     })
+
+def login(request):
+    return render(request, 'dinner/login.html', {})

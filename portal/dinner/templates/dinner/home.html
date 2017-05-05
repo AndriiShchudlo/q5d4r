@@ -3,15 +3,65 @@
 {% block title %} Home {%endblock%}
 {% block content %}
 
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-user " href="#">(username)</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="glyphicon glyphicon-shopping-cart" href="#">Замовлення</a></li>
+        <li><a  class="glyphicon glyphicon-log-out" href="#">Вийти</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-{%for menu in menus %}
- <div>
-    <h3>{{menu.section}}<h3>
-    {%for i in items%}
-        {{i.name}}
 
-        {%endfor%}
- </div>
-{% endfor %}
+<h3>Перші страви</h3>
+<div class="container">
+  <div class="row">
+   {%for i in firstFoods%}
+        <div class="col-sm-3">
+              <div class="panel panel-info">
+                <div class="panel-heading">{{i.firstFoodName}}</div>
+                <div class="panel-body"><img  src="{{i.firstFoodImage}}" class="img-responsive block_size"style="width:20vw" style="height:20vw" alt="Image"></div>
+                <div class="panel-footer">{{i.firstFoodPrice}} грн.
+                    <button type="button" class="btn btn-warning glyphicon glyphicon-ok" style="text-align: right"> Замовити</button>
+                </div>
+              </div>
+        </div>
+    {%endfor%}
+  </div>
+</div><br>
+
+<h3>Другі страви</h3>
+<div class="container">
+  <div class="row">
+   {%for i in secondFoods%}
+        <div class="col-sm-3">
+              <div class="panel panel-info">
+                <div class="panel-heading">{{i.secondFoodName}}</div>
+                <div class="panel-body"><img  src="{{i.secondFoodImage}}" class="img-responsive block_size"style="width:20vw" style="height:20vw" alt="Image"></div>
+                <div class="panel-footer">{{i.secondFoodPrice}} грн.
+                <button type="button" class="btn btn-warning glyphicon glyphicon-ok" style="text-align: right"> Замовити</button>
+                </div>
+              </div>
+        </div>
+    {%endfor%}
+  </div>
+</div><br>
+
+
+
+
+
+
 
 {%endblock%}

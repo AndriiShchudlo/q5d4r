@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import NewMenu, Item
-
-admin.site.register(NewMenu)
-admin.site.register(Item)
+from .models import FirstFood, SecondFood
+#
+admin.site.register(SecondFood)
+admin.site.register(FirstFood)
