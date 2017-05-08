@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+import datetime
 from django.db.models.functions import datetime
 from django.shortcuts import render
 from django.contrib import auth
@@ -52,7 +52,18 @@ def dinnerMenu(request):
     food = Food.objects.all()
     menu = Menu.objects.all()
     foodDay = request.POST.get('dinnerDate', '')
-    print (foodDay+"da")
+    enterDate = foodDay.split("-")
+    year = enterDate[0]
+    month = enterDate[1]
+    day = enterDate[2]
+    # a = datetime.date(day, month, year)
+    # print a.isoweekday()
+    datee = datetime.date(year=year,month=month,day=day)
+    print  datee.isoweekday()
+
+
+
+
     datas = {
         "foods": food,
         "menu": menu,

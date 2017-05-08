@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da7e9068-9e08-4615-8034-8fdab471e740" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portal/dinner/templates/dinner/dinnerMenu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/portal/dinner/workWithDate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/bdb.sqlite3" afterPath="$PROJECT_DIR$/portal/bdb.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/admin.py" afterPath="$PROJECT_DIR$/portal/dinner/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/models.py" afterPath="$PROJECT_DIR$/portal/dinner/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/static/dinner/style.css" afterPath="$PROJECT_DIR$/portal/dinner/static/dinner/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/templates/dinner/base.html" afterPath="$PROJECT_DIR$/portal/dinner/templates/dinner/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/templates/dinner/home.html" afterPath="$PROJECT_DIR$/portal/dinner/templates/dinner/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/templates/dinner/login.html" afterPath="$PROJECT_DIR$/portal/dinner/templates/dinner/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/urls.py" afterPath="$PROJECT_DIR$/portal/dinner/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portal/dinner/views.py" afterPath="$PROJECT_DIR$/portal/dinner/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,8 +68,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portal/dinner/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+            <state relative-caret-position="318">
+              <caret line="60" column="3" lean-forward="false" selection-start-line="60" selection-start-column="3" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -91,8 +80,8 @@
       <file leaf-file-name="workWithDate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/portal/dinner/workWithDate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="204">
+              <caret line="12" column="24" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -903,14 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/portal/dinner/workWithDate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portal/dinner/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -967,10 +948,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/portal/dinner/workWithDate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/portal/dinner/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+        <state relative-caret-position="318">
+          <caret line="60" column="3" lean-forward="false" selection-start-line="60" selection-start-column="3" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
