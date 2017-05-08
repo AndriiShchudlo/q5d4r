@@ -4,29 +4,28 @@
 {% block content %}
 
 
-    {%for m in menu%}
-        <h3>{{m.categoryName}}</h3>
-        <div class="container">
-          <div class="row">
-           {%for i in foods%}
-              {%if i.foodCategory.id == m.id%}
-                <div class="col-sm-3">
-                      <div class="panel panel-info">
-                        <div class="panel-heading">{{i.foodName}}</div>
-                        <div class="panel-body" ><img  src="{{i.foodImage}}" class="img-responsive block_size" style="width:10vw"  height="auto" alt="Image"></div>
-                        <div class="panel-footer">{{m.categoryPrice}} грн.
-                            <button type="button" class="btn btn-info glyphicon glyphicon-ok" style="text-align: right" name="{{i.id}}"> Замовити</button>
-                        </div>
-                      </div>
-                </div>
-              {%endif%}
-            {%endfor%}
-          </div>
-        </div><br>
-    {%endfor%}
 
 
 
+<div class="container-fluid">
+  <div class="row content">
+      <form method="post" action="/menu/">{% csrf_token %}
+         <div class="col-sm-3 sidenav"></div>
+         <div class="col-sm-2 sidenav">
+             <ul class="nav nav-pills nav-stacked">
+              <li><label>Оберіть дату замовлення: </label></li>
+              <li><input type="date" class="form-control" id="dinnerDate" name="dinnerDate" placeholder="Виберіть день"></li>
+             </ul><br>
+         </div>
+      <div class="col-sm-1 sidenav"></div>
+         <div class="col-sm-2 sidenav"style="margin-top: 2vw">
+            <ul class="nav nav-pills nav-stacked">
+                 <li><button type="submit" class="btn btn-info">Підтвердити</button></li>
+            </ul><br>
+         </div>
+      </form>
+  </div>
+</div>
 
 
 

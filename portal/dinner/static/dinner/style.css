@@ -17,3 +17,6 @@
 .avtoriz_style{
     text-align: center;
 }
+.login_error{
+    background-color: red;
+}

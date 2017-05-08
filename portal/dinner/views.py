@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
+from django.db.models.functions import datetime
 from django.shortcuts import render
 from django.contrib import auth
 
 from dinner.models import Food, Menu
 from django.shortcuts import render_to_response, redirect
 from django.contrib import auth
-import logging
 
 from django.template.context_processors import csrf
-
+from workWithDate import Date
 
 def get_user(request):
     username = None
@@ -17,13 +18,7 @@ def get_user(request):
         username = request.user.username
     return render(request, 'dinner/base.html', {"user": username})
 
-def home(request):
-    food = Food.objects.all()
-    menu = Menu.objects.all()
-    return render(request, 'dinner/home.html', {
-        "foods": food,
-        "menu": menu,
-    })
+
 
 def login(request):
     return render(request, 'dinner/login.html', {})
@@ -39,7 +34,7 @@ def loginSys(request):
         inputUser = request.POST.get('inputUser', '')
         print inputUser
         inputPassword = request.POST.get('inputPassword', '')
-        user = auth.authenticate(username = inputUser, password = inputPassword)
+        user = auth.authenticate(username=inputUser, password = inputPassword)
         if user is not None:
             auth.login(request, user)
             return redirect('/')
@@ -52,3 +47,18 @@ def loginSys(request):
 def logout(request):
      auth.logout(request)
      return redirect('/')
+
+def dinnerMenu(request):
+    food = Food.objects.all()
+    menu = Menu.objects.all()
+    foodDay = request.POST.get('dinnerDate', '')
+    print (foodDay+"da")
+    datas = {
+        "foods": food,
+        "menu": menu,
+    }
+    return render(request,'dinner/dinnerMenu.html', datas)
+
+def home(request):
+
+    return render(request, 'dinner/home.html', {})

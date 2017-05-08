@@ -1,0 +1,32 @@
+{% extends 'dinner/base.html' %}
+{% block title %} Home {%endblock%}
+{% block content %}
+
+
+    {%for m in menu%}
+        <h3>{{m.categoryName}}</h3>
+        <div class="container">
+          <div class="row">
+           {%for i in foods%}
+              {%if i.foodCategory.id == m.id%}
+                <div class="col-sm-3">
+                      <div class="panel panel-info">
+                        <div class="panel-heading">{{i.foodName}}</div>
+                        <div class="panel-body" ><img  src="{{i.foodImage}}" class="img-responsive block_size" style="width:10vw"  height="auto" alt="Image"></div>
+                        <div class="panel-footer">{{m.categoryPrice}} грн.
+                            <button type="button" class="btn btn-info glyphicon glyphicon-ok" style="text-align: right" name="{{i.id}}"> Замовити</button>
+                        </div>
+                      </div>
+                </div>
+              {%endif%}
+            {%endfor%}
+          </div>
+        </div><br>
+    {%endfor%}
+
+
+
+
+
+
+{%endblock%}

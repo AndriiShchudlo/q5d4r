@@ -34,13 +34,14 @@
        <a class="navbar-brand glyphicon glyphicon-user " href="/login/"> Авторизуйтесь в системі</a>
       {%endif%}
     </div>
+
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
 
 
-        <li><a class="glyphicon glyphicon-home " href="/home/">Головна</a></li>
+        <li><a class="glyphicon glyphicon-home " href="/">Головна</a></li>
          {%if user.username%}
-        <li><a class="glyphicon glyphicon-shopping-cart" href="/basket/">Замовлення</a></li>
+        <li><a class="glyphicon glyphicon-shopping-cart" href="/basket/">Історія_Замовлення</a></li>
         <li><a  class="glyphicon glyphicon-log-out" href="/logout/">Вийти</a></li>
         {%else%}
           <li><a  class="glyphicon glyphicon-log-in" href="/login/"> Увійти</a></li>
