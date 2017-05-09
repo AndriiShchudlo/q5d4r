@@ -35,17 +35,13 @@ class Food(models.Model):
         return self.foodName
 
 
-class Bascket(models.Model):
+class CustomFood(models.Model):
     class Meta:
-        db_table = "bascket"
-    productName = models.TextField()
-    productCategory = models.TextField()
-    productPrice = models.FloatField()
-    def __str__(self):
-        return self.productName
+        db_table = "customFood"
+    customUserName = models.TextField()
+    firstFood = models.TextField()
+    secondFood = models.TextField()
+    salatFood = models.TextField()
+    customDate = models.DateField()
+    customPrice = models.FloatField()
 
-class Purchase(models.Model):
-    class Meta:
-        db_table = "purchase"
-    username = models.TextField()
-    purchaseId = models.ForeignKey(Bascket)

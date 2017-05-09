@@ -3,26 +3,87 @@
 {% block content %}
 
 
-    {%for m in menu%}
-        <h3>{{m.categoryName}}</h3>
-        <div class="container">
-          <div class="row">
-           {%for i in foods%}
-              {%if i.foodCategory.id == m.id%}
-                <div class="col-sm-3">
-                      <div class="panel panel-info">
-                        <div class="panel-heading">{{i.foodName}}</div>
-                        <div class="panel-body" ><img  src="{{i.foodImage}}" class="img-responsive block_size" style="width:10vw"  height="auto" alt="Image"></div>
-                        <div class="panel-footer">{{m.categoryPrice}} грн.
-                            <button type="button" class="btn btn-info glyphicon glyphicon-ok" style="text-align: right" name="{{i.id}}"> Замовити</button>
-                        </div>
-                      </div>
-                </div>
-              {%endif%}
-            {%endfor%}
-          </div>
-        </div><br>
-    {%endfor%}
+<div class="container-fluid">
+  <div class="row content">
+         <div class="col-sm-10 sidenav">
+             <!--<label>Ваше замовлення:</label>-->
+             <ul class="nav nav-pills nav-stacked">
+             <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        {%for category in menu%}
+                          <th>{{category.categoryName}} <span style="color:#CC3434">{{category.categoryPrice}} грн.</span></th>
+                        {%endfor%}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          {%for category in menu%}
+                        <td id="{{category.category.id}}"></td>
+                          {%endfor%}
+                      </tr>
+                    </tbody>
+                  </table>
+             </ul><br>
+         </div>
+         <div class="col-sm-2 sidenav">
+             <label style="text-align: center">00.00 грн</label>
+                <div>
+                    <button type="submit"  class="btn btn-info">Замовити</button>
+               </div>
+         </div>
+   </div>
+</div>
+
+
+
+
+
+
+<!--<div data-spy="scroll" data-target=".navbar" data-offset="50">-->
+
+<!--<nav class="navbar navbar-inverse">-->
+  <!--<div class="container-fluid">-->
+    <!--<div>-->
+      <!--<div class="collapse navbar-collapse" id="myNavbar">-->
+        <!--<ul class="nav navbar-nav">-->
+          <!--<li><a href="#section1">Section 1</a></li>-->
+          <!--<li><a href="#section2">Section 2</a></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</nav>-->
+
+<!--<div id="section1" class="container-fluid">-->
+  <!--<h1>Section 1</h1>-->
+<!--</div>-->
+<!--<div id="section2" class="container-fluid">-->
+  <!--<h1>Section 2</h1>-->
+<!--</div>-->
+
+
+    <!--{%for m in menu%}-->
+        <!--<h3>{{m.categoryName}}</h3>-->
+        <!--<div class="container">-->
+          <!--<div class="row">-->
+           <!--{%for i in foods%}-->
+              <!--{%if i.foodCategory.id == m.id%}-->
+                <!--<div class="col-sm-2">-->
+                      <!--<div class="panel panel-info">-->
+                        <!--<div class="panel-heading">{{i.foodName}}</div>-->
+                        <!--<div class="panel-body" ><img  src="{{i.foodImage}}" class="img-responsive block_size" style="width:10vw"  height="auto" alt="Image"></div>-->
+                        <!--<div class="panel-footer">{{m.categoryPrice}} грн.-->
+                            <!--<button type="button" class="btn btn-info glyphicon glyphicon-ok" style="text-align: right" name="{{i.id}}"> Замовити</button>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                <!--</div>-->
+              <!--{%endif%}-->
+            <!--{%endfor%}-->
+          <!--</div>-->
+        <!--</div><br>-->
+    <!--{%endfor%}-->
+
 
 
 

@@ -58,15 +58,13 @@ def dinnerMenu(request):
     day = enterDate[2]
     # a = datetime.date(day, month, year)
     # print a.isoweekday()
-    datee = datetime.date(year=year,month=month,day=day)
-    print  datee.isoweekday()
-
-
-
+    # datee = datetime.date(year=year,month=month,day=day)
+    # print  datee.isoweekday()
 
     datas = {
         "foods": food,
         "menu": menu,
+
     }
     return render(request,'dinner/dinnerMenu.html', datas)
 
